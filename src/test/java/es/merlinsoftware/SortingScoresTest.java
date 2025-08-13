@@ -51,7 +51,7 @@ public class SortingScoresTest {
 
         Long[] expectedResult = {2L, 4L, 3L, 1L};
 
-        Assert.assertArrayEquals(Solution.sortProductsByScores(0, 50, productStock, productSales).toArray(),
+        Assert.assertArrayEquals(Solution.sortProductsByScores(49, 50, productStock, productSales).toArray(),
                 expectedResult);
     }
     @Test
@@ -59,6 +59,7 @@ public class SortingScoresTest {
         List<ProductSales> productSales = new ArrayList<>();
         productSales.add(new ProductSales(1L, 10000.0));
         productSales.add(new ProductSales(4L, 75000.0));
+        productSales.add(new ProductSales(5L, 75000.0));
 
 
         List<ProductStock> productStock = new ArrayList<>();
@@ -68,7 +69,7 @@ public class SortingScoresTest {
         productStock.add(new ProductStock(4L, 300000L));
 
 
-        Long[] expectedResult = {2L, 4L, 3L, 1L};
+        Long[] expectedResult = {2L, 4L, 3L, 1L, 5L};
 
         Assert.assertArrayEquals(Solution.sortProductsByScores(50, 50, productStock, productSales).toArray(),
                 expectedResult);
