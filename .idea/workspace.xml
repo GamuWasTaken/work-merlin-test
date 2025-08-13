@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fef0db06-81c5-46b7-973e-21f069f10c01" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1QX6fgDc3KUTtDfhx2CCb4Jdg1z" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="SortingScoresTest.testHappyPath" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="codeinterview" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="es.merlinsoftware.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="es.merlinsoftware" />
+      <option name="MAIN_CLASS_NAME" value="es.merlinsoftware.SortingScoresTest" />
+      <option name="METHOD_NAME" value="testHappyPath" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.SortingScoresTest.testHappyPath" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fef0db06-81c5-46b7-973e-21f069f10c01" name="Default Changelist" comment="" />
+      <created>1567904698044</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1567904698044</updated>
+      <workItem from="1567904699459" duration="750000" />
+      <workItem from="1567931210400" duration="47000" />
+      <workItem from="1568105273093" duration="166000" />
+      <workItem from="1568105745417" duration="584000" />
+      <workItem from="1568123784814" duration="557000" />
+      <workItem from="1568147897006" duration="26000" />
+      <workItem from="1568151189727" duration="185000" />
+      <workItem from="1568185557466" duration="667000" />
+      <workItem from="1568198202768" duration="520000" />
+      <workItem from="1568354958815" duration="11000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>
