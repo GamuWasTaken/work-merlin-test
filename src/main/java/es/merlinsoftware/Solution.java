@@ -15,19 +15,32 @@ public class Solution {
             throw new IllegalArgumentException("Weights must add to 100");
         }
 
-        Map<Long, Double> salesMap = new HashMap<>();
+        Map<Long, Pair<Double, Long>> infoMap = new HashMap<>();
 
         productsSalesInformation
             .stream()
-            .forEach(sale -> salesMap.put(sale.getProductId(), sale.getSalesAmount()));
+            .forEach(sale -> infoMap.put(
+                sale.getProductId(),
+                new Pair<Double, Long>(sale.getSalesAmount(), 0L))
+            );
+        productsStockInformation
+            .stream()
+            .forEach(stock -> 
+                infoMap.merge(
+                    stock.getProductId(),
+                    new Pair<>(0.0, stock.getAvailableStock()),
+                    (foundEntry, newEntry) -> new Pair<>(foundEntry.a, newEntry.b))
+            );
 
         Map<Long, Double> scores = new HashMap<>();
 
-        productsStockInformation.stream().forEach(stock -> {
-            double saleAmount = salesMap.getOrDefault(stock.getProductId(), 0.0);
-            double score = (stockWeight / 100.0 * stock.getAvailableStock()) + (salesWeight / 100.0 * saleAmount);
+        infoMap.entrySet().stream().forEach(entry-> {
+            double saleAmount = entry.getValue().a;
+            long availableStock = entry.getValue().b;
+            
+            double score = (stockWeight / 100.0 * availableStock) + (salesWeight / 100.0 * saleAmount);
 
-            scores.put(stock.getProductId(), score);
+            scores.put(entry.getKey(), score);
         });
 
         List<Long> result = scores
@@ -43,5 +56,18 @@ public class Solution {
 
         return result;
     }
+}
 
+class Pair<A, B> {
+    A a;
+    B b;
+
+    public Pair(A a, B b) {
+        this.a = a;
+        this.b = b;
+    }
+    public A getA() { return this.a; }
+    public B getB() { return this.b; }
+    public void setA(A a) { this.a = a; }
+    public void setB(B b) { this.b = b; }
 }
